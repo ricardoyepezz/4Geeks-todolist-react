@@ -1,23 +1,22 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 
-function Todo({ todo, index, markTodo, removeTodo }) {
+function Todo({ todo, index, /* markTodo, */ removeTodo }) {
 	return (
-		<div className="todo">
+		<div>
 			<span style={{ textDecoration: todo.isDone ? "line-through" : "" }}>
 				{todo.text}
 			</span>
 			<div>
-				<Button
-					variant="outline-success"
+				{/* <button
+					className="btn btn-success"
 					onClick={() => markTodo(index)}>
 					✓
-				</Button>{" "}
-				<Button
-					variant="outline-danger"
+				</button> */}
+				<button
+					className="btn btn-danger"
 					onClick={() => removeTodo(index)}>
 					✕
-				</Button>
+				</button>
 			</div>
 		</div>
 	);
