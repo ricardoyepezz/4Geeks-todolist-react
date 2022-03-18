@@ -9,14 +9,15 @@ const Home = () => {
 
 	const addTodo = (text) => {
 		const newTodos = [...todos, { text }];
+
 		setTodos(newTodos);
 	};
 
-	/* const markTodo = (index) => {
+	const markTodo = (index) => {
 		const newTodos = [...todos];
 		newTodos[index].isDone = true;
 		setTodos(newTodos);
-	}; */
+	};
 
 	const removeTodo = (index) => {
 		const newTodos = [...todos];
@@ -27,6 +28,7 @@ const Home = () => {
 	return (
 		<div className="container border border-dark text-center w-50 mt-5">
 			<h1 className="fw-light">To-Do List</h1>
+			<h3 className="fw-light">Tasks: {todos.length}</h3>
 			<FormTodo addTodo={addTodo} />
 			<div>
 				{todos.map((todo, index) => (
@@ -34,7 +36,7 @@ const Home = () => {
 						key={index}
 						index={index}
 						todo={todo}
-						/* markTodo={markTodo} */
+						markTodo={markTodo}
 						removeTodo={removeTodo}
 					/>
 				))}

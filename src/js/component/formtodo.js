@@ -8,7 +8,6 @@ function FormTodo({ addTodo }) {
 		if (!value) return;
 		addTodo(value);
 		setValue("");
-		console.log(value);
 	};
 
 	return (

@@ -1,17 +1,17 @@
 import React from "react";
 
-function Todo({ todo, index, /* markTodo, */ removeTodo }) {
+function Todo({ todo, index, markTodo, removeTodo }) {
 	return (
 		<div>
 			<span style={{ textDecoration: todo.isDone ? "line-through" : "" }}>
 				{todo.text}
 			</span>
 			<div>
-				{/* <button
+				<button
 					className="btn btn-success"
 					onClick={() => markTodo(index)}>
 					✓
-				</button> */}
+				</button>
 				<button
 					className="btn btn-danger"
 					onClick={() => removeTodo(index)}>
